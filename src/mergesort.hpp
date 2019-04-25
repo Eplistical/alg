@@ -38,9 +38,6 @@ namespace {
     }
 
     vector<int> mergesort(const vector<int>& nums) {
-        /*
-         * merge sort 
-         */
         const int N = nums.size();
         if (N == 1) {
             return nums;

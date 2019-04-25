@@ -10,7 +10,6 @@ namespace {
 
     int quickselect(vector<int>& nums, const int k) {
         const int N = nums.size();
-        // randomly pick v
         default_random_engine gen;
         const int v = nums[uniform_int_distribution<int>(0, N-1)(gen)]; 
 

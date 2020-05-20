@@ -1,6 +1,8 @@
 #include <vector>
 #include <random>
 #include <iostream>
+#include <deque>
+#include <functional>
 #include <string>
 
 using namespace std;
@@ -10,6 +12,8 @@ namespace {
     class StringMatching {
         public:
             vector<int> naive(const string& T, const string& P) {
+                // naive algorithm
+                // O(n*(n-m+1))
                 const int m = T.size();
                 const int n = P.size();
                 vector<int> rst;
@@ -41,7 +45,7 @@ namespace {
 int main(int argc, char** argv) {
     StringMatching s;
     string T = "abcabaabcabac";
-    string P = "abc";
+    string P = "abaa";
 
     if (argc >= 2) {
         T = argv[1];
